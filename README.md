@@ -91,7 +91,4 @@ Apache License Version 2.0, January 2004
 ## ScreenShots
 Android | IOS
 --------|---------
-Coming Soon | ![Photo](https://i.imgur.com/TnYUC83.jpg)
-Coming Soon | ![Before](https://i.imgur.com/VGl0zF3.jpg)
 Coming Soon | ![Recording](https://i.imgur.com/IlVn65w.jpg)
-Coming Soon | ![Preview](https://i.imgur.com/SCD59Vl.jpg)
