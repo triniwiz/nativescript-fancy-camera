@@ -1,0 +1,41 @@
+Page {
+    background-color: black;
+}
+
+@keyframes stop {
+    from { transform: scale(1,1) }
+    to { transform: scale(0,0) }
+}
+
+.btn-scale{
+    animation-name:stop;
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
+}
+
+.record-btn {
+    border-radius: 50%;
+    width: 50;
+    height: 50;
+    border-color: white;
+    border-width: 2;
+    vertical-align: center;
+    horizontal-align: center;
+}
+
+.record-btn-inner {
+    border-radius: 50%;
+    width: 40;
+    height: 40;
+    vertical-align: center;
+    horizontal-align: center;
+    background-color: red;
+}
+
+.stop-btn {
+    width: 25;
+    height: 25;
+    vertical-align: center;
+    horizontal-align: center;
+    background-color: red;
+}

@@ -1,0 +1,42 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:ui="nativescript-fancy-camera/view"
+      xmlns:video="nativescript-videoplayer"
+      loaded="loaded">
+    <ActionBar title="{{ currentTime | toTime }}" backgroundSpanUnderStatusBar="true" backgroundColor="black"
+               flat="true">
+        <ActionItem visibility="{{videoRecorded ? 'hidden': 'visible'}}" ios.position="left" tap="cancel">
+            <GridLayout>
+                <Image height="24" width="24" src="{{deleteIcon}}"/>
+            </GridLayout>
+        </ActionItem>
+        <ActionItem visibility="{{videoRecorded ? 'hidden': 'visible'}}" ios.position="right" tap="toggleCamera">
+            <GridLayout>
+                <Image height="24" width="24" src="{{switchIcon}}"/>
+            </GridLayout>
+        </ActionItem>
+    </ActionBar>
+    <GridLayout rows="*">
+        <ui:CameraView loaded="cameraLoaded" rowSpan="2" colSpan="3"
+                       visibility="{{ videoRecorded ? 'collapse': 'visible'}}" id="cameraView"/>
+        <video:Video colSpan="3" visibility="{{!videoRecorded ? 'hidden': 'visible'}}" src="{{src}}"/>
+        <GridLayout verticalAlignment="bottom" columns="*,*,*" paddingBottom="20%">
+
+            <Label col="1" row="1" height="100"/>
+
+            <Label visibility="{{!videoRecorded ? 'visible': 'collapse'}}" col="1" row="1" class="record-btn"/>
+            <Label visibility="{{!videoRecorded ? 'visible': 'collapse'}}" id="start" col="1" row="1"
+                   class="record-btn-inner"
+                   tap="record"/>
+            <Label visibility="{{!videoRecorded ? 'visible': 'collapse'}}" id="stop" opacity="0" col="1" row="1"
+                   class="stop-btn"
+                   tap="stopRecord"/>
+
+            <Image height="50" src="{{okIcon}}" visibility="{{videoRecorded ? 'visible': 'collapse'}}" col="1" row="1"
+                   tap="done"/>
+            <Image height="32" src="{{retryIcon}}" visibility="{{videoRecorded ? 'visible': 'collapse'}}" col="0"
+                   row="1"
+                   tap="retry"/>
+        </GridLayout>
+    </GridLayout>
+</Page>
+

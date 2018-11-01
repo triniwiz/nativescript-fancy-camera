@@ -1,0 +1,32 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:ui="nativescript-fancy-camera/view" loaded="loaded">
+    <ActionBar backgroundSpanUnderStatusBar="true" backgroundColor="black" flat="true">
+        <ActionItem ios.position="left" tap="cancel">
+            <GridLayout>
+                <Image height="24" width="24" src="{{deleteIcon}}"/>
+            </GridLayout>
+        </ActionItem>
+        <ActionItem ios.position="right" tap="toggleCamera">
+            <GridLayout>
+                <Image height="24" width="24" src="{{switchIcon}}"/>
+            </GridLayout>
+        </ActionItem>
+    </ActionBar>
+    <GridLayout rows="*">
+        <ui:CameraView loaded="cameraLoaded" rowSpan="2" colSpan="3"
+                       visibility="{{ photoTaken ? 'collapse': 'visible'}}" id="cameraView"/>
+        <Image colSpan="3" visibility="{{!photoTaken ? 'hidden': 'visible'}}" src="{{src}}"/>
+        <GridLayout verticalAlignment="bottom" columns="*,*,*" paddingBottom="20%">
+
+            <Label col="1" row="1" height="100"/>
+
+            <Button visibility="{{photoTaken ? 'collapse': 'visible'}}" col="1" row="1" class="photo-btn"
+                    tap="takePhoto"/>
+            <Image height="50" src="{{okIcon}}" visibility="{{photoTaken ? 'visible': 'collapse'}}" col="1" row="1"
+                   tap="done"/>
+            <Image height="32" src="{{retryIcon}}" visibility="{{photoTaken ? 'visible': 'collapse'}}" col="0" row="1"
+                   tap="retry"/>
+        </GridLayout>
+    </GridLayout>
+</Page>
+

@@ -1,0 +1,13 @@
+.photo-btn {
+    border-radius: 50%;
+    width: 50;
+    height: 50;
+    border-color: white;
+    border-width: 2;
+    vertical-align: center;
+    horizontal-align: center;
+}
+
+Page {
+    background-color: black;
+}

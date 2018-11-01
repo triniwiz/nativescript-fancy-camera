@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
+  xmlns:ui="nativescript-fancy-camera/view">
+  <GridLayout rows="*,*,auto,auto,auto" class="p-20">
+    <ui:CameraView id="cameraView"/>
+    <Image row="1" id="imageView"/>
+  </GridLayout>
+</Page>

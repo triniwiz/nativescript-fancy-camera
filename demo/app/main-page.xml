@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page"
+      xmlns:ui="nativescript-fancy-camera/view"
+      xmlns:video="nativescript-videoplayer"
+>
+    <GridLayout rows="*,*,auto,auto,auto,auto,auto,auto,auto" class="p-20">
+        <ui:CameraView id="cameraView"/>
+        <Image row="1" id="imageView" visibility="{{hasImage ? 'visible' : 'hidden'}}" src="{{src}}"/>
+        <video:Video row="1" id="imageView" visibility="{{hasVideo ? 'visible' : 'hidden'}}" src="{{src}}"/>
+        <Button row="2" text="Toggle Camera" tap="toggleCamera"/>
+        <Button row="3" text="Take Photo" tap="takePhoto"/>
+        <Button row="4" text="Record Video" tap="recordVideo"/>
+        <Button row="5" text="Stop Recording" tap="stopRecord"/>
+        <Button row="6" text="Show Camera" tap="showCamera"/>
+        <Button row="7" text="Show Basic Recorder" tap="showBasicRecorder"/>
+        <Button row="8" text="Show Basic Photo" tap="showBasicPhoto"/>
+    </GridLayout>
+</Page>
