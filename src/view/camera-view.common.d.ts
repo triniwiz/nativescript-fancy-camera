@@ -11,6 +11,7 @@ export declare enum Quality {
     HIGHEST = "highest",
     LOWEST = "lowest",
     QVGA = "qvga",
+    PHOTO = "photo",
 }
 export declare type CameraPositionType = 'back' | 'front';
 export declare enum CameraFlashMode {

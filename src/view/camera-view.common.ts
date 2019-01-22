@@ -12,7 +12,8 @@ export enum Quality {
   MAX_2160P = '2160p',
   HIGHEST = 'highest',
   LOWEST = 'lowest',
-  QVGA = 'qvga'
+  QVGA = 'qvga',
+  PHOTO = 'photo'
 }
 
 export type CameraPositionType = 'back' | 'front';

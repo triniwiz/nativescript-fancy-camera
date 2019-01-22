@@ -241,6 +241,11 @@ export class CameraView extends CameraViewBase {
           co.fitcom.fancycamera.FancyCamera.Quality.QVGA.getValue()
         );
         break;
+      case Quality.PHOTO.toString():
+        this.nativeView.setQuality(
+          co.fitcom.fancycamera.FancyCamera.Quality.PHOTO.getValue()
+        );
+        break;
       default:
         this.nativeView.setQuality(
           co.fitcom.fancycamera.FancyCamera.Quality.MAX_480P.getValue()
