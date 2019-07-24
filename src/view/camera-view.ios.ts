@@ -1,6 +1,6 @@
 import * as fs from 'tns-core-modules/file-system';
 import { layout } from 'tns-core-modules/ui/core/view';
-import '../async-await';
+
 import {
   CameraFlashMode,
   CameraPosition,
@@ -255,6 +255,7 @@ export class CameraView extends CameraViewBase {
       this._photoFile = NSURL.fileURLWithPath(photoPath);
       this._file = NSURL.fileURLWithPath(path);
       this._photoOutput = new AVCapturePhotoOutput();
+
       if (!this._videoInput) {
         this.notify({
           eventName: 'error',

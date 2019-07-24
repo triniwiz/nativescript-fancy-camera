@@ -45,6 +45,7 @@ export const qualityProperty = new Property<CameraViewBase, any>({
   name: 'quality',
   defaultValue: Quality.MAX_480P
 });
+
 export const cameraPositionProperty = new Property<
   CameraViewBase,
   CameraPositionType

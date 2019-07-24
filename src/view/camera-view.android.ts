@@ -36,7 +36,7 @@ export class CameraView extends CameraViewBase {
   private durationInterval: any;
 
   public static isAvailable() {
-    return app.android.currentContext
+    return app.android.context
       .getPackageManager()
       .hasSystemFeature(android.content.pm.PackageManager.FEATURE_CAMERA);
   }
