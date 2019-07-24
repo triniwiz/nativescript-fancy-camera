@@ -21,5 +21,6 @@ demo/platforms
 node_modules
 publish/src
 publish/package
+package
 demo/report/report.html
 demo/report/stats.json
