@@ -12,7 +12,8 @@ export enum Quality {
   MAX_2160P = '2160p',
   HIGHEST = 'highest',
   LOWEST = 'lowest',
-  QVGA = 'qvga'
+  QVGA = 'qvga',
+  PHOTO = 'photo'
 }
 
 export type CameraPositionType = 'back' | 'front';
@@ -44,6 +45,7 @@ export const qualityProperty = new Property<CameraViewBase, any>({
   name: 'quality',
   defaultValue: Quality.MAX_480P
 });
+
 export const cameraPositionProperty = new Property<
   CameraViewBase,
   CameraPositionType

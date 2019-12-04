@@ -28,7 +28,8 @@
             "~/*": [
                 "app/*"
             ]
-        }, "typeRoots": []
+        },
+        "typeRoots": []
     },
     "include": [
         "../src",

@@ -1,4 +1,3 @@
-import '../async-await';
 import { CameraViewBase } from './camera-view.common';
 export declare class CameraView extends CameraViewBase {
     nativeView: UIView;

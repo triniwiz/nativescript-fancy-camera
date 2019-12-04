@@ -36,7 +36,7 @@ export class CameraView extends CameraViewBase {
   private durationInterval: any;
 
   public static isAvailable() {
-    return app.android.currentContext
+    return app.android.context
       .getPackageManager()
       .hasSystemFeature(android.content.pm.PackageManager.FEATURE_CAMERA);
   }
@@ -239,6 +239,11 @@ export class CameraView extends CameraViewBase {
       case Quality.QVGA.toString():
         this.nativeView.setQuality(
           co.fitcom.fancycamera.FancyCamera.Quality.QVGA.getValue()
+        );
+        break;
+      case Quality.PHOTO.toString():
+        this.nativeView.setQuality(
+          co.fitcom.fancycamera.FancyCamera.Quality.PHOTO.getValue()
         );
         break;
       default:
